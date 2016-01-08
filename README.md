@@ -7,6 +7,8 @@ Esse repositório contem os ambientes virtuais utilizados nos projetos do LEDS. 
  * __password__ : password do usuário do banco de dados;
  * __database_name__ : nome do banco de dados a ser criado;
 
+Para rodar os arquivos basta digitar o comando: **__docker-compose up -d__**
+
 Segue a lista de ambientes virtualizados:
 * __Pentaho 5.4__: é uma solução open-source de analise e integração de dados;
 * __Sonar 5.2__: é uma plataforma open-source de gerenciamento da qualidade de código de software;
