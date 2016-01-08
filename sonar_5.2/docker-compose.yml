@@ -1,21 +1,21 @@
 postgresql:
   image: orchardup/postgresql:latest
   environment:
-    - POSTGRESQL_USER=<user>
-    - POSTGRESQL_PASS=<passoword>
-    - POSTGRESQL_DB=<database_name>
+    - POSTGRESQL_USER=xxx
+    - POSTGRESQL_PASS=xxx
+    - POSTGRESQL_DB=xxx
   volumes:
     - /opt/db/sonarqube/:/var/lib/postgresql
   ports:
     - "5050:5432"
-sonar:
+sonarqube:
   image: sonarqube:latest
   links:
     - postgresql:db
   environment:
-    - DB_USER=<user>
-    - DB_PASS=<passoword>
-    - DB_NAME=<database_name>
+    - DB_USER=xxx
+    - DB_PASS=xxx
+    - DB_NAME=xxx
   ports:
     - "9000:9000"
     - "443"
