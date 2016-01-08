@@ -5,11 +5,11 @@ postgresql:
     - POSTGRESQL_PASS=<passoword>
     - POSTGRESQL_DB=<database_name>
   volumes:
-    - /opt/db/sonar/:/var/lib/postgresql
+    - /opt/db/sonarqube/:/var/lib/postgresql
   ports:
-    - "5052:5432"
-pentaho:
-  image: sonarqube
+    - "5050:5432"
+sonar:
+  image: sonarqube:latest
   links:
     - postgresql:db
   environment:
@@ -18,3 +18,4 @@ pentaho:
     - DB_NAME=<database_name>
   ports:
     - "9000:9000"
+    - "443"
