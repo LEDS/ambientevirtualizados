@@ -3,9 +3,9 @@ Esse repositório contem os ambientes virtuais utilizados nos projetos do LEDS. 
 
  É importante comentar que no caso das feramentas que necessitam de uma certa configuração de banco de dados é necessário modificar o arquivo __docker-compose.yml__. Por motivo de segurança não deixamos as senhas e usários pré-configurados nesse arquivo. Dessa forma, é necessário substituir as seguintes __tags__ do arquivo citado:
 
- * <user> = usuário do banco de dados
- * <passoword> = password do usuário do banco de dados;
- * <database_name> = nome do banco de dados a ser criado;
+ * __user__ : usuário do banco de dados
+ * __password__ : password do usuário do banco de dados;
+ * __database_name__ : nome do banco de dados a ser criado;
 
 Segue a lista de ambientes virtualizados:
 * __Pentaho 5.4__: é uma solução open-source de analise e integração de dados;
