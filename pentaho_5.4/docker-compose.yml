@@ -1,0 +1,20 @@
+postgresql:
+  image: orchardup/postgresql:latest
+  environment:
+    - POSTGRESQL_USER=<user>
+    - POSTGRESQL_PASS=<passoword>
+    - POSTGRESQL_DB=<database_name>
+  volumes:
+    - /opt/db/pentaho/:/var/lib/postgresql
+  ports:
+    - "5051:5432"
+pentaho:
+  image: wmarinho/pentaho-biserver
+  links:
+    - postgresql:db
+  environment:
+    - DB_USER=<user>
+    - DB_PASS=<passoword>
+    - DB_NAME=<database_name>
+  ports:
+    - "82:8080"

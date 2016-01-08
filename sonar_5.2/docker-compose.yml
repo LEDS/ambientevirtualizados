@@ -1,0 +1,20 @@
+postgresql:
+  image: orchardup/postgresql:latest
+  environment:
+    - POSTGRESQL_USER=<user>
+    - POSTGRESQL_PASS=<passoword>
+    - POSTGRESQL_DB=<database_name>
+  volumes:
+    - /opt/db/sonar/:/var/lib/postgresql
+  ports:
+    - "5052:5432"
+pentaho:
+  image: sonarqube
+  links:
+    - postgresql:db
+  environment:
+    - DB_USER=<user>
+    - DB_PASS=<passoword>
+    - DB_NAME=<database_name>
+  ports:
+    - "9000:9000"
